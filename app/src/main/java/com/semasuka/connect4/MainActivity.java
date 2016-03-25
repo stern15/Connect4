@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
         counter.setTranslationY(-1000f);
         counter.setImageResource(R.drawable.yellow);
-        counter.animate().translationY(1000f).rotation(3600).setDuration(300);
+        counter.animate().translationYBy(1000f).rotation(360).setDuration(1000);
 
     }
 
