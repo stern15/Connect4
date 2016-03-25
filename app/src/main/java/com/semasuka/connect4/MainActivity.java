@@ -8,6 +8,8 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     //0 for yellow and 1 for red
     int ActiveUser=0;
+    //2 means it is an unplayed slot within the grid
+    int[] gameStatus={2,2,2,2,2,2,2,2,2};
 
     public void dropIn(View view){
         //here we use view only use view because the view containt an empty image so there is no id
