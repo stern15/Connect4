@@ -14,7 +14,16 @@
         android:layout_height="360dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:columnCount="3"
-        android:rowCount="3"
-        android:background="@drawable/board"></GridLayout>
+        android:columnCount="9"
+        android:rowCount="13"
+        android:background="@drawable/board">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageView"
+            android:layout_row="12"
+            android:layout_column="8"
+            android:src="@drawable/red" />
+    </GridLayout>
 </RelativeLayout>
