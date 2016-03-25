@@ -9,8 +9,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.semasuka.connect4.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:background="@drawable/board"></GridLayout>
 </RelativeLayout>
