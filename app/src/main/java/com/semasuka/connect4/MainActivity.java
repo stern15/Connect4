@@ -11,12 +11,18 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     //0 for yellow and 1 for red
     int ActiveUser=0;
+
+
     //2 means it is an unplayed slot within the grid(2 is placeholder temporary)
     int[] gameStatus={2,2,2,2,2,2,2,2,2};
 
 
     //These are all the combinaison of placeholder that lead to the win the game
     int[][] winningPositions={{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
+
+
+    //this variable keep track if the variable is active
+    Boolean activeGame=true;
 
     public void dropIn(View view) {
 
@@ -55,7 +61,10 @@ public class MainActivity extends AppCompatActivity {
                 if(gameStatus[winningPosition[0]]==gameStatus[winningPosition[1]] &&
                         gameStatus[winningPosition[1]]==gameStatus[winningPosition[2]] &&
                             gameStatus[winningPosition[0]]!=2){
+                    //someone has win
 
+                    //after someone has win the activeGame will be set to false
+                    activeGame=false;
 
                     String winner="";
                     if(gameStatus[winningPosition[0]]==0){
@@ -89,16 +98,18 @@ public class MainActivity extends AppCompatActivity {
 
             public void playAgain(View view){
 
+                activeGame=true;
+
                 //by clicking on the but we make the playagain layout invisible
                 LinearLayout playAgainLayout=(LinearLayout)findViewById(R.id.playAgainLayout);
 
                 playAgainLayout.setVisibility(View.INVISIBLE);
 
-                //
+                //resting the activeUser to 0
                 ActiveUser=0;
 
 
-
+                //resting the gameStatus to 0
                 for(int i=0;i<gameStatus.length;i++){
 
                     gameStatus[i]=2;
@@ -110,8 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-
-
 
             }
     @Override
