@@ -129,7 +129,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#9fc580"
+        android:background="#3944d5"
         android:padding="30dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -143,8 +143,7 @@
             android:text="Text holder"
             android:id="@+id/winnerText"
             android:layout_gravity="center_horizontal"
-            android:textSize="25sp"
-            android:onClick="playAgain" />
+            android:textSize="40sp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -152,7 +151,8 @@
             android:text="Play Again"
             android:id="@+id/PlayAgainButton"
             android:layout_gravity="center_horizontal"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:onClick="playAgain" />
     </LinearLayout>
 
 </RelativeLayout>

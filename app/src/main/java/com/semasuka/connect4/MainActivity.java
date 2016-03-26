@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             //now we animate it by the translation
             counter.animate().translationYBy(1000f).rotationBy(360).setDuration(500);
 
-            //we created an integer array that will loop trought the winningPositions and will compare each index of winningPosition to the next index
+            //we created an integer array that will loop through the winningPositions and will compare each index of winningPosition to the next index
             //and check if the combinaison of all those index gives and at the end we are checking if its not 2 coz 2 mean that it is not yet played
             for(int[]winningPosition:winningPositions){
 
@@ -63,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
                     else {
                         winner="red";
                     }
+                    //getting the text view by id
                     TextView winnerText=(TextView) findViewById(R.id.winnerText);
-
-                    winnerText.setText(winner+" has won");
+                    //setting the textview to the winner
+                    winnerText.setText(winner+" has won!");
 
 
                     //someone has won and we want to display the vertical layout that holds the replay button
@@ -82,6 +83,29 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    //this methods is to restart again the app
+
+            public void playAgain(View view){
+
+                //by clicking on the but we make the playagain layout invisible
+                LinearLayout playAgainLayout=(LinearLayout)findViewById(R.id.playAgainLayout);
+
+                playAgainLayout.setVisibility(View.INVISIBLE);
+
+                //
+                ActiveUser=0;
+
+
+
+                for(int i=0;i<gameStatus.length;i++){
+
+                    gameStatus[i]=2;
+                }
+
+
+
+            }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
