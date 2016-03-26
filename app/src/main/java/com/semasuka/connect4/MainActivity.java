@@ -93,9 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     boolean gameIsOver=true;
                     for(int counterState:gameStatus){
-                        if (counterState==2){
-
-                            gameIsOver=false;
+                        if (counterState==2) gameIsOver=false;
 
                         }
                         if(gameIsOver){
@@ -122,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
-    }
+
+
 
     //this methods is to restart again the app
 
