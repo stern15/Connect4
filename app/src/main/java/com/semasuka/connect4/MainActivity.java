@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
     //2 means it is an unplayed slot within the grid(2 is placeholder temporary)
     int[] gameStatus={2,2,2,2,2,2,2,2,2};
 
+    int[][] winningGame={{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{3,4,6}};
+
     public void dropIn(View view) {
 
 
