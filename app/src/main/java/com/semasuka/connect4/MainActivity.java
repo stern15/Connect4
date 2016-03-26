@@ -2,9 +2,10 @@ package com.semasuka.connect4;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //0 for yellow and 1 for red
@@ -12,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     //2 means it is an unplayed slot within the grid(2 is placeholder temporary)
     int[] gameStatus={2,2,2,2,2,2,2,2,2};
 
+
+    //These are all the combinaison of placeholder that lead to the win the game
     int[][] winningPositions={{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
 
     public void dropIn(View view) {
@@ -53,14 +56,30 @@ public class MainActivity extends AppCompatActivity {
                             gameStatus[winningPosition[0]]!=2){
 
 
-                    Log.i("gameStatus", String.valueOf(gameStatus[winningPosition[0]]));
+                    String winner="";
+                    if(gameStatus[winningPosition[0]]==0){
+                        winner="yellow";
+                    }
+                    else {
+                        winner="red";
+                    }
+                    TextView winnerText=(TextView) findViewById(R.id.winnerText);
+
+                    winnerText.setText(winner+" has won");
+
+
+                    //someone has won and we want to display the vertical layout that holds the replay button
+
+                    LinearLayout playAgainLayout=(LinearLayout)findViewById(R.id.playAgainLayout);
+
+                    playAgainLayout.setVisibility(View.VISIBLE);
+
+
+
+
                 }
 
-
-
             }
-
-
         }
     }
     @Override
