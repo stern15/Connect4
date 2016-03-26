@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         int tappedCounter = Integer.parseInt(counter.getTag().toString());
 
 
-        if (gameStatus[tappedCounter] == 2) {
+        if (gameStatus[tappedCounter] == 2 && activeGame) {
 
             gameStatus[tappedCounter]=ActiveUser;
 
