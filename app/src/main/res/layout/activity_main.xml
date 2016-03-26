@@ -10,7 +10,7 @@
     tools:context="com.semasuka.connect4.MainActivity">
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="360dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -26,7 +26,8 @@
             android:layout_column="0"
             android:onClick="dropIn"
             android:layout_margin="10dp"
-            android:tag="0"/>
+            android:tag="0"
+            android:layout_marginRight="45dp" />
 
         <ImageView
             android:layout_width="90dp"
@@ -37,7 +38,8 @@
             android:onClick="dropIn"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:tag="1"/>
+            android:tag="1"
+            android:layout_marginRight="45dp" />
 
         <ImageView
             android:layout_width="90dp"
@@ -48,7 +50,8 @@
             android:onClick="dropIn"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:tag="2"/>
+            android:tag="2"
+            android:layout_marginRight="45dp" />
 
         <ImageView
             android:layout_width="90dp"
@@ -59,7 +62,8 @@
             android:onClick="dropIn"
             android:layout_marginTop="25dp"
             android:layout_margin="10dp"
-            android:tag="3"/>
+            android:tag="3"
+            android:layout_marginRight="20dp" />
 
         <ImageView
             android:layout_width="90dp"
@@ -70,7 +74,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="25dp"
             android:onClick="dropIn"
-            android:tag="4"/>
+            android:tag="4"
+            android:layout_marginRight="20dp" />
 
         <ImageView
             android:layout_width="90dp"
@@ -81,7 +86,8 @@
             android:onClick="dropIn"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="25dp"
-            android:tag="5"/>
+            android:tag="5"
+            android:layout_marginRight="20dp" />
 
         <ImageView
             android:layout_width="90dp"
