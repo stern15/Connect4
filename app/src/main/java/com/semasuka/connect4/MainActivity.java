@@ -102,7 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
                             //getting the text view by id
                             TextView winnerText=(TextView) findViewById(R.id.winnerText);
-                            //setting the textview to the winner
+
+
+                            //setting that there is a draw
                             winnerText.setText("It is a draw");
 
 
