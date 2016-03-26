@@ -89,6 +89,34 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
+                //when there is a draw
+                else{
+                    boolean gameIsOver=true;
+                    for(int counterState:gameStatus){
+                        if (counterState==2){
+
+                            gameIsOver=false;
+
+                        }
+                        if(gameIsOver){
+
+                            //getting the text view by id
+                            TextView winnerText=(TextView) findViewById(R.id.winnerText);
+                            //setting the textview to the winner
+                            winnerText.setText("It is a draw");
+
+
+                            //someone has won and we want to display the vertical layout that holds the replay button
+
+                            LinearLayout playAgainLayout=(LinearLayout)findViewById(R.id.playAgainLayout);
+
+                            playAgainLayout.setVisibility(View.VISIBLE);
+
+
+                        }
+
+                    }
+                }
 
             }
         }
