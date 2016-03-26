@@ -3,6 +3,7 @@ package com.semasuka.connect4;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -101,6 +102,13 @@ public class MainActivity extends AppCompatActivity {
                 for(int i=0;i<gameStatus.length;i++){
 
                     gameStatus[i]=2;
+                }
+                GridLayout gridLayout=(GridLayout)findViewById(R.id.gridLayout);
+                for (int i=0;i< gridLayout.getChildCount();i++){
+
+                    ((ImageView) gridLayout.getChildAt(i)).setImageResource(0);
+
+
                 }
 
 
